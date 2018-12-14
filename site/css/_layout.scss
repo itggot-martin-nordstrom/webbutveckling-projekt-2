@@ -1,5 +1,38 @@
-body{
-    min-height: 100vh;
+@import 'variables'; 
 
-    background-color: red;
+html, body, .wrapper{
+    min-height: 100vh;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.wrapper{
+    display: grid;
+    grid-template-rows: 100px auto 150px;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer'; 
+
+    }
+    
+header{
+    grid-area: header;
+        
+    background-color: $primary-color;
+}
+
+main{
+    grid-area: main;
+    
+    background-color: $secondary-color;
+}
+
+footer{
+    grid-area: footer;
+    
+    background-color: $primary-color;
 }
