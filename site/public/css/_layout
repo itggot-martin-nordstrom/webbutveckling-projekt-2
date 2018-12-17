@@ -7,14 +7,24 @@ html, body, .wrapper {
 .wrapper {
   display: grid;
   grid-template-rows: 100px auto 150px;
-  grid-template-areas: 'header' 'main' 'footer'; }
+  grid-template-areas: 'header' 'content' 'footer'; }
 
 header {
   grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #134b80; }
+  header ul {
+    display: flex;
+    flex-direction: row; }
+    header ul li a {
+      margin-right: 30px; }
+    header ul :nth-last-child(1) a {
+      margin-right: 60px; }
 
-main {
-  grid-area: main;
+.content {
+  grid-area: content;
   background-color: #ee4e76; }
 
 footer {
