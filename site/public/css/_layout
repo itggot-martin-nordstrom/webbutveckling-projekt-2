@@ -14,19 +14,34 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #134b80; }
+  background-color: #aed5fa; }
+  header h1 {
+    margin-left: 60px; }
+  header i {
+    color: #ff0b48; }
   header ul {
     display: flex;
     flex-direction: row; }
     header ul li a {
+      position: relative;
       margin-right: 30px; }
     header ul :nth-last-child(1) a {
-      margin-right: 60px; }
+      margin-right: 80px; }
+    header ul li a::before {
+      content: '';
+      position: absolute;
+      top: calc(100% + 5px);
+      height: 4px;
+      width: 100%;
+      background-color: #ff0b48;
+      transform: scaleX(0);
+      transition: transform 300ms; }
+    header ul li a:hover::before {
+      transform: scaleX(1); }
 
 .content {
-  grid-area: content;
-  background-color: #ee4e76; }
+  grid-area: content; }
 
 footer {
   grid-area: footer;
-  background-color: #134b80; }
+  background-color: #aed5fa; }

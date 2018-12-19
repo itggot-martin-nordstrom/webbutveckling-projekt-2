@@ -1,7 +1,12 @@
 @import 'variables';
 
-h1,h2,h3,h4,p,a{
+body,a{
     // font-family: 'Open Sans', sans-serif;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: $dark-text;
+}
+
+h1{
+    font-weight: 800;
+    letter-spacing: 2px;
 }
