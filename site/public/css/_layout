@@ -17,10 +17,10 @@ header {
   background-color: #aed5fa; }
   header h1 {
     position: relative;
-    font-size: 30px;
-    margin-left: 0px; }
+    font-size: 26px;
+    margin-right: 20px; }
     header h1 i.sidebar-trigger {
-      margin-left: 20px; }
+      color: #ff0b48; }
     header h1::before {
       display: block;
       position: absolute;
@@ -42,6 +42,7 @@ header {
       position: absolute;
       top: calc(100% + 5px);
       height: 4px;
+      border-radius: 2px;
       width: 100%;
       background-color: #ff0b48;
       transform: scaleX(0);
@@ -51,10 +52,30 @@ header {
 
 .sidebar {
   position: fixed;
-  left: -100%;
   height: 100vh;
-  width: 100vw;
+  width: 80vw;
+  clip-path: polygon(90% 0, 90% 100%, 100% 100%, 85% 60%, 90% 60%, 75% 25%, 80% 25%);
   background-color: #05af5a; }
+  .sidebar ul {
+    position: relative;
+    padding: 50px 30px; }
+  .sidebar li {
+    position: relative;
+    margin-bottom: 30px; }
+    .sidebar li::before {
+      display: block;
+      position: absolute;
+      content: '';
+      left: -15px;
+      height: 100%;
+      width: 4px;
+      background-color: #ff0b48; }
+  .sidebar li:nth-last-child(1) {
+    position: fixed;
+    bottom: 100px; }
+  .sidebar li a {
+    font-size: 30px;
+    color: #fff; }
 
 .content {
   grid-area: content; }
