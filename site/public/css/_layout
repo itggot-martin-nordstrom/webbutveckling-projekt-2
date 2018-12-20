@@ -54,7 +54,7 @@ header {
   position: fixed;
   height: 100vh;
   width: 80vw;
-  clip-path: polygon(90% 0, 90% 100%, 100% 100%, 85% 60%, 90% 60%, 75% 25%, 80% 25%);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 85% 60%, 100% 60%, 85% 25%, 100% 25%, 85% 0);
   background-color: #05af5a; }
   .sidebar ul {
     position: relative;
