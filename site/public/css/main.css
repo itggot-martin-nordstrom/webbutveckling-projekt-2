@@ -6,6 +6,14 @@ h1 {
   font-weight: 800;
   letter-spacing: 2px; }
 
+input {
+  padding: 8px;
+  padding-left: 14px;
+  border: none;
+  max-width: 200px;
+  margin-bottom: 15px;
+  border-radius: 10px; }
+
 ul {
   list-style: none;
   padding: 0;
@@ -14,6 +22,22 @@ ul {
 li a {
   text-decoration: none;
   color: #202020; }
+
+button {
+  position: relative;
+  top: 0;
+  padding: 0.5rem 1rem;
+  background-color: #aed5fa;
+  color: #202020;
+  border: none;
+  border-radius: 10px;
+  max-width: 50%;
+  transition: 250ms;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+
+button:hover {
+  top: -3px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); }
 
 html, body, .wrapper {
   min-height: 100vh;
@@ -34,8 +58,7 @@ header {
   background-color: #aed5fa; }
   header h1 {
     position: relative;
-    font-size: 26px;
-    margin-right: 20px; }
+    font-size: 20px; }
     header h1 i.sidebar-trigger {
       color: #285988; }
     header h1::before {
@@ -49,7 +72,7 @@ header {
 
 .material-icons {
   position: fixed;
-  right: 50px;
+  left: 30px;
   top: 50px;
   transform: translateY(-50%);
   padding: 10px;
@@ -80,7 +103,7 @@ header {
       left: -15px;
       height: 100%;
       width: 4px;
-      background-color: #285988; }
+      background-color: #aed5fa; }
   .sidebar li:nth-last-child(1) {
     position: fixed;
     bottom: 100px; }
@@ -92,17 +115,17 @@ header {
   left: 0; }
 
 .sidebar-fade {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 100vw;
+  left: 0;
   bottom: 0;
-  right: 0;
+  right: 100vw;
   z-index: 5;
   background-color: rgba(4, 0, 65, 0.5);
   transition: 250ms ease-out 250ms; }
 
 .SidebarFadeToggle {
-  left: 0; }
+  right: 0; }
 
 .content {
   grid-area: content; }
@@ -143,3 +166,34 @@ footer {
     bottom: 100%; }
   100% {
     bottom: -100%; } }
+.places {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 20px; }
+  .places img {
+    max-width: 200px;
+    max-height: 200px; }
+  .places .trip-finder {
+    background-color: #285988;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: right;
+    flex-direction: column; }
+    .places .trip-finder h1 {
+      margin-top: 0;
+      color: white; }
+
+@media only screen and (min-width: 700px) {
+  .places {
+    flex-direction: row; }
+    .places img {
+      max-width: 400px;
+      max-height: 400px; } }
+@media only screen and (min-width: 1000px) {
+  .places img {
+    max-width: 600px;
+    max-height: 600px; } }

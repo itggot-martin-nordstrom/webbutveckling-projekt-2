@@ -24,6 +24,7 @@
 
     height: 100%;
     width: 100%;
+    // transform: scale(0.8);
     background: url(../img/snowflake.png);
     background-repeat: repeat-x;
     /* background-size: cover; */
@@ -37,5 +38,56 @@
     }
     100%{
         bottom: -100%;
+    }
+}
+
+
+.places{
+    // background-color: $primary-color;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px 20px;
+
+    img{
+        // display: none;
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+    .trip-finder{
+        background-color: $secondary-color;
+        width: 100%;
+        max-width: 300px;
+        padding: 20px;
+        
+        display: flex;
+        justify-content: right;
+        flex-direction: column;
+
+        h1{
+            margin-top: 0;
+            color: white;
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .places{
+        flex-direction: row;
+
+        img{
+            max-width: 400px;
+            max-height: 400px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .places img{
+        max-width: 600px;
+        max-height: 600px;
     }
 }
