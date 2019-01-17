@@ -52,15 +52,15 @@
 
     img{
         // display: none;
-        max-width: 200px;
-        max-height: 200px;
+        max-width: 250px;
+        max-height: 250px;
     }
     
     .trip-finder{
         background-color: $secondary-color;
         width: 100%;
         max-width: 300px;
-        padding: 20px;
+        padding: 40px;
         
         display: flex;
         justify-content: right;
@@ -74,6 +74,28 @@
     }
 }
 
+.home-information{
+    width: 100%;
+    
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-color: red;
+    
+    article{
+        display: flex;
+
+        .article-text{
+            padding: 20px 50px;
+        }
+
+        &:nth-child(2n){
+            flex-direction: row-reverse;
+        }
+    }
+}
+
 @media only screen and (min-width: 700px){
     .places{
         flex-direction: row;
@@ -83,11 +105,22 @@
             max-height: 400px;
         }
     }
+
+    .home-information{
+        display: flex;
+    }
 }
 
 @media only screen and (min-width: 1000px){
-    .places img{
-        max-width: 600px;
-        max-height: 600px;
+    .places{
+
+        img{
+            max-width: 400px;
+            max-height: 400px;
+        }
+
+        .trip-finder{
+            padding: 60px;
+        }
     }
 }

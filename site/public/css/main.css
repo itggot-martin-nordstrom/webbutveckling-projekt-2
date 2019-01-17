@@ -173,13 +173,13 @@ footer {
   align-items: center;
   padding: 40px 20px; }
   .places img {
-    max-width: 200px;
-    max-height: 200px; }
+    max-width: 250px;
+    max-height: 250px; }
   .places .trip-finder {
     background-color: #285988;
     width: 100%;
     max-width: 300px;
-    padding: 20px;
+    padding: 40px;
     display: flex;
     justify-content: right;
     flex-direction: column; }
@@ -187,13 +187,31 @@ footer {
       margin-top: 0;
       color: white; }
 
+.home-information {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background-color: red; }
+  .home-information article {
+    display: flex; }
+    .home-information article .article-text {
+      padding: 20px 50px; }
+    .home-information article:nth-child(2n) {
+      flex-direction: row-reverse; }
+
 @media only screen and (min-width: 700px) {
   .places {
     flex-direction: row; }
     .places img {
       max-width: 400px;
-      max-height: 400px; } }
+      max-height: 400px; }
+
+  .home-information {
+    display: flex; } }
 @media only screen and (min-width: 1000px) {
   .places img {
-    max-width: 600px;
-    max-height: 600px; } }
+    max-width: 400px;
+    max-height: 400px; }
+  .places .trip-finder {
+    padding: 60px; } }
