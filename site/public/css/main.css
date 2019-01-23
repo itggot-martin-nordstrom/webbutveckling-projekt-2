@@ -239,6 +239,11 @@ footer {
     font-size: 50px;
     color: white; }
 
+.seedo-hero-text {
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; }
+
 .fixed {
   /* background: red; */
   position: relative;
@@ -270,7 +275,7 @@ footer {
   100% {
     top: -180px; } }
 .flipcards {
-  padding: 50px;
+  padding: 40px 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -278,9 +283,9 @@ footer {
 
 .flipcard {
   margin: 0 10px;
-  height: 300px;
-  width: 240px;
-  margin-bottom: 150px;
+  height: 150px;
+  width: 120px;
+  margin-bottom: 100px;
   transform-style: preserve-3d;
   perspective: 1000px; }
   .flipcard:hover .flipcard-front {
@@ -314,17 +319,39 @@ footer {
     position: absolute;
     height: 100%;
     left: 50%;
-    transform: translateX(-50%) scale(1.1); }
+    transform: translateX(-50%); }
 
 .flipcard-back {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #000000;
+  background-color: #285988;
   backface-visibility: hidden;
   transform: rotateY(180deg);
   transition: .5s;
-  color: #ffffff;
-  text-align: center; }
+  color: #efefef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .flipcard-back h1, .flipcard-back p {
+    max-width: 80%; }
+  .flipcard-back h1 {
+    font-size: 80%;
+    text-transform: uppercase; }
+  .flipcard-back p {
+    display: none; }
+
+@media only screen and (min-width: 550px) {
+  .seedo-hero-text {
+    display: flex; }
+
+  .flipcards {
+    padding: 60px 15px; }
+
+  .flipcard {
+    height: 300px;
+    width: 240px; }
+
+  .flipcard p {
+    display: block; } }
