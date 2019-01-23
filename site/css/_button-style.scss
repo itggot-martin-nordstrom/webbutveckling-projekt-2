@@ -1,21 +1,17 @@
 button{
-    position: relative;
-    top: 0;
-
-    padding: 0.5rem 1rem;
+    transform: translateY(0);
+    
+    padding: 0.5rem 0;
     background-color: $primary-color;
     color: $dark-text;
     border: none;
     border-radius: 10px;
-
-    max-width: 50%;
-
+    
     transition: 250ms;
-
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+    
 }
 
 button:hover{
-    top: -3px;
+    transform: translateY(-3px);
     box-shadow: $box-shadow;
 }

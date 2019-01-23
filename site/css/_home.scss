@@ -24,11 +24,9 @@
 
     height: 100%;
     width: 100%;
-    // transform: scale(0.8);
     background: url(../img/snowflake.png);
     background-repeat: repeat-x;
-    /* background-size: cover; */
-
+    
     animation: snowflakes linear infinite 10s;
 }
 
@@ -43,7 +41,6 @@
 
 
 .places{
-    // background-color: $primary-color;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-evenly;
@@ -51,16 +48,19 @@
     padding: 40px 20px;
 
     img{
-        // display: none;
+        // filter: hue-rotate(300deg);
+        filter: brightness(0.5);
         max-width: 250px;
         max-height: 250px;
     }
     
     .trip-finder{
+        position: relative;
         background-color: $secondary-color;
         width: 100%;
         max-width: 300px;
         padding: 40px;
+        box-shadow: $box-shadow;
         
         display: flex;
         justify-content: right;
@@ -81,10 +81,20 @@
     flex-direction: column;
     justify-content: center;
     
-    background-color: red;
-    
     article{
         display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 100px;
+
+        img{
+            max-width: 400px;
+            max-height: 300px;
+            background-size: cover;
+
+            border: 5px #fff solid;
+            box-shadow: $box-shadow;
+        }
 
         .article-text{
             padding: 20px 50px;
@@ -92,6 +102,10 @@
 
         &:nth-child(2n){
             flex-direction: row-reverse;
+            
+            h1{
+                text-align: right;
+            }
         }
     }
 }
