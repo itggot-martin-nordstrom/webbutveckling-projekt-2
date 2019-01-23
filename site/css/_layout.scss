@@ -56,6 +56,8 @@ header{
     color: $light-text;
     box-shadow: $box-shadow;
     cursor: pointer;
+
+    z-index: 9;
 }
     
 .sidebar{
@@ -131,4 +133,28 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: $primary-color;
+}
+
+@media only screen and (min-width: 500px){
+    header h1{
+        font-size: 26px;
+    }
+}
+@media only screen and (min-width: 700px){
+    header h1{
+        font-size: 32px;
+        &::before{
+            top: 115%;
+        }
+    }
+}
+@media only screen and (min-width: 1000px){
+    header h1{
+        font-size: 40px;
+
+        &::before{
+            top: 105%;
+            height: 8px;
+        }
+    }
 }

@@ -77,7 +77,8 @@ header {
   background-color: #285988;
   color: #efefef;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 9; }
 
 .sidebar {
   position: fixed;
@@ -136,6 +137,20 @@ footer {
   align-items: center;
   background-color: #aed5fa; }
 
+@media only screen and (min-width: 500px) {
+  header h1 {
+    font-size: 26px; } }
+@media only screen and (min-width: 700px) {
+  header h1 {
+    font-size: 32px; }
+    header h1::before {
+      top: 115%; } }
+@media only screen and (min-width: 1000px) {
+  header h1 {
+    font-size: 40px; }
+    header h1::before {
+      top: 105%;
+      height: 8px; } }
 .hero {
   display: block;
   height: 70vh;
@@ -240,12 +255,11 @@ footer {
     color: white; }
 
 .seedo-hero-text {
-  padding: 30px;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.7);
   display: none; }
 
 .fixed {
-  /* background: red; */
   position: relative;
   height: 60px; }
 
@@ -355,3 +369,68 @@ footer {
 
   .flipcard p {
     display: block; } }
+.food-class {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 50px 60px; }
+  .food-class h1 {
+    grid-column: span 1;
+    margin: 0;
+    margin-bottom: 20px; }
+
+.food-item {
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+  color: #efefef;
+  transition: 250ms; }
+  .food-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover; }
+  .food-item:hover {
+    transform: scale(1.05);
+    z-index: 5; }
+  .food-item:hover .food-desc {
+    top: 0;
+    opacity: 1; }
+  .food-item:hover .food-fade {
+    opacity: 1; }
+
+.food-fade {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  outline: 5px solid rgba(0, 0, 0, 0.7);
+  outline-offset: 5px;
+  transition: 250ms; }
+
+.food-desc {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  opacity: 0;
+  transition: 500ms; }
+
+@media only screen and (min-width: 750px) {
+  .food-class {
+    grid-template-columns: 1fr 1fr; }
+    .food-class h1 {
+      grid-column: span 2; } }
+@media only screen and (min-width: 1000px) {
+  .food-class {
+    grid-template-columns: 1fr 1fr 1fr; }
+    .food-class h1 {
+      grid-column: span 3; } }
