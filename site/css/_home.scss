@@ -54,23 +54,24 @@
         max-height: 250px;
     }
     
-    .trip-finder{
-        position: relative;
-        background-color: $secondary-color;
-        width: 100%;
-        max-width: 300px;
-        padding: 40px;
-        box-shadow: $box-shadow;
-        
-        display: flex;
-        justify-content: right;
-        flex-direction: column;
+}
 
-        h1{
-            margin-top: 0;
-            color: white;
-            
-        }
+.trip-finder{
+    position: relative;
+    background-color: $secondary-color;
+    width: 100%;
+    max-width: 300px;
+    padding: 40px;
+    box-shadow: $box-shadow;
+    
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+
+    h1{
+        margin-top: 0;
+        color: white;
+        
     }
 }
 

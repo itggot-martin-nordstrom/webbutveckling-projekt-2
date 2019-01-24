@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+    <title>Visit the North Pole</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>VisitNorthPole.com</h1>
+        </header>
+        <i class="material-icons" onclick="SidebarToggle()">menu</i>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Get Here</a></li>
+                <li><a href="#">Where To Go</a></li>
+                <li><a href="/site/public/see&do.html">See & Do</a></li>
+                <li><a href="/site/public/eat&drink.html">Eat & Drink</a></li>
+                <li><a href="/site/public/home.html">Home</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-fade" onclick="SidebarToggle()"></div>
+
+        <div class="content">
+
+            
+<div class="trip-finder">
+    <h1>
+        Your start:
+        <span id="get-here-start"></span>
+    </h1>
+    
+    <h1>
+        Your destination:
+        <span id="get-here-end"></span>
+    </h1>
+    <input type="text" placeholder="Enter your location..." id="startLocation">
+    <input type="text" placeholder="Enter destination..." id="endLocation">
+
+    <button class="find-button" onclick="SaveItems()">
+        Find your trip
+    </button>
+</div>
+
+<div class="routes">
+    <div class="route">
+        start end
+    </div>
+</div>
+
+        </div>
+        
+        <footer>
+            Copyright by The North Pole Company, 2018
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

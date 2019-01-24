@@ -25,7 +25,7 @@ li a {
 
 button {
   transform: translateY(0);
-  padding: 0.5rem 0;
+  padding: 0.7rem 1.4rem;
   background-color: #aed5fa;
   color: #202020;
   border: none;
@@ -189,19 +189,20 @@ footer {
     filter: brightness(0.5);
     max-width: 250px;
     max-height: 250px; }
-  .places .trip-finder {
-    position: relative;
-    background-color: #285988;
-    width: 100%;
-    max-width: 300px;
-    padding: 40px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    display: flex;
-    justify-content: right;
-    flex-direction: column; }
-    .places .trip-finder h1 {
-      margin-top: 0;
-      color: white; }
+
+.trip-finder {
+  position: relative;
+  background-color: #285988;
+  width: 100%;
+  max-width: 300px;
+  padding: 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: right;
+  flex-direction: column; }
+  .trip-finder h1 {
+    margin-top: 0;
+    color: white; }
 
 .home-information {
   width: 100%;
@@ -296,7 +297,7 @@ footer {
   align-items: center; }
 
 .flipcard {
-  margin: 0 10px;
+  margin: 0 40px;
   height: 150px;
   width: 120px;
   margin-bottom: 100px;
@@ -314,7 +315,10 @@ footer {
     height: 10px;
     background: radial-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
     filter: blur(5px);
-    border-radius: 50%; }
+    border-radius: 50%;
+    transition: 1500ms; }
+  .flipcard:hover:before {
+    width: 50%; }
 
 .flipcard-front {
   height: 100%;
@@ -325,7 +329,7 @@ footer {
   background-color: #000000;
   backface-visibility: hidden;
   transform: rotateY(0deg);
-  transition: .5s;
+  transition: 1500ms;
   overflow: hidden;
   box-sizing: border-box;
   border: 5px solid #285988; }
@@ -342,21 +346,21 @@ footer {
   background-color: #285988;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  transition: .5s;
+  transition: 1500ms;
   color: #efefef;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
   .flipcard-back h1, .flipcard-back p {
-    max-width: 80%; }
+    max-width: 75%; }
   .flipcard-back h1 {
     font-size: 80%;
     text-transform: uppercase; }
   .flipcard-back p {
     display: none; }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 600px) {
   .seedo-hero-text {
     display: flex; }
 
@@ -434,3 +438,23 @@ footer {
     grid-template-columns: 1fr 1fr 1fr; }
     .food-class h1 {
       grid-column: span 3; } }
+.trip-finder {
+  flex-direction: row;
+  max-width: calc(100vw - 40px);
+  padding: 80px 20px 40px 20px; }
+  .trip-finder h1 {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    font-size: 20px; }
+    .trip-finder h1:nth-child(1) {
+      top: 10px; }
+    .trip-finder h1:nth-child(2) {
+      top: 40px; }
+  .trip-finder input {
+    margin: 0;
+    margin-right: 20px; }
+  .trip-finder button {
+    position: absolute;
+    right: 0;
+    transform: translateX(-100%); }

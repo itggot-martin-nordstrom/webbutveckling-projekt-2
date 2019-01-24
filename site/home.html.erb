@@ -8,9 +8,13 @@
     <img src="/site/img/arctic.png" alt="#">
     <div class="trip-finder">
         <h1>Find trip</h1>
-        <input type="text" placeholder="Enter your location...">
-        <input type="text" placeholder="Enter destination...">
-        <button class="find-button">Find your trip</button>
+        <input type="text" placeholder="Enter your location..." id="startLocation">
+        <input type="text" placeholder="Enter destination..." id="endLocation">
+        <a href="/site/public/get-here.html">
+            <button class="find-button" onclick="SaveItems()">
+                Find your trip
+            </button>
+        </a>
     </div>
 </div>
 
