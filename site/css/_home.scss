@@ -81,15 +81,16 @@
     display: none;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 50px;
     
     article{
         display: none;
         justify-content: center;
         align-items: center;
-        padding: 25px 100px;
+        padding: 25px 60px;
 
         img{
-            max-width: 400px;
+            max-width: 350px;
             max-height: 300px;
             background-size: cover;
 
@@ -99,6 +100,7 @@
 
         .article-text{
             padding: 20px 50px;
+            max-width: 375px;
         }
 
         &:nth-child(2n){

@@ -13,7 +13,7 @@ function SaveItems(){
     var end = document.querySelector("#endLocation");
     window.localStorage.setItem("end", end.value);
 
-    
+    // för att kunna lägga in värdena på start och end flera gånger
     document.querySelector("#get-here-start").innerHTML = window.localStorage.getItem("start");
     document.querySelector("#get-here-end").innerHTML = window.localStorage.getItem("end");
     document.querySelector("#get-here-start1").innerHTML = window.localStorage.getItem("start");
@@ -32,6 +32,7 @@ function SaveItems(){
 
 console.log("SCRIPT LOADED")
 
+// för att kunna lägga in värdena på start och end flera gånger
 document.querySelector("#get-here-start").innerHTML = window.localStorage.getItem("start");
 document.querySelector("#get-here-end").innerHTML = window.localStorage.getItem("end");
 document.querySelector("#get-here-start1").innerHTML = window.localStorage.getItem("start");
