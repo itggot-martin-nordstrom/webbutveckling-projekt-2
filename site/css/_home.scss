@@ -83,7 +83,7 @@
     justify-content: center;
     
     article{
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         padding: 25px 100px;
@@ -127,15 +127,23 @@
 }
 
 @media only screen and (min-width: 1000px){
+    
     .places{
-
+        
         img{
             max-width: 400px;
             max-height: 400px;
         }
-
+        
         .trip-finder{
             padding: 60px;
+        }
+    }
+    
+    .home-information{
+        
+        article{
+            display: flex;
         }
     }
 }
